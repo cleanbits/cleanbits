@@ -1,0 +1,59 @@
+{
+  "name": "@cleanbits/react",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*",
+    "build": "rollup --config",
+    "dev": "npm run build -- --watch"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./dist/index.js": "./dist/index.js",
+    "./dist/index.d.ts": "./dist/index.d.ts"
+  },
+  "author": "htmujahid",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmujahid/react-json-viewer.git"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.4",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.79.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/cleanbits/cleanbits/tree/main/packages/react/issues"
+  },
+  "homepage": "https://github.com/cleanbits/cleanbits/tree/main/packages/react#readme",
+  "tags": [
+    "react",
+    "json-viewer",
+    "viewer"
+  ],
+  "keywords": [
+    "react",
+    "cleanbits",
+    "json-viewer",
+    "viewer"
+  ]
+}
