@@ -93,12 +93,23 @@ export default function Page() {
         </Condition.Group>
       </>
       <>
-        <Map cbList={list} cbItem={Item} cbFilter={(item) => item.id !== 2} />
+        <Map
+          cbList={list}
+          cbItem={Item}
+          cbFilter={(item: any) => item.id !== 2}
+        />
         {
           <>
             {list.map((item, index) => {
               if (item.id !== 2) {
-                return <Item key={index} index={index} item={item} />;
+                return (
+                  <Item
+                    key={index}
+                    index={index}
+                    name={item.name}
+                    age={item.age}
+                  />
+                );
               }
             })}
           </>
@@ -109,15 +120,17 @@ export default function Page() {
 }
 
 const Item = ({
+  name,
+  age,
   index,
-  item,
 }: {
+  name: string;
+  age: number;
   index: number;
-  item: { name: string; age: number };
 }) => {
   return (
     <div>
-      {index + 1}: {item.name} {item.age}
+      {index + 1}: {name} {age}
     </div>
   );
 };
