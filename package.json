@@ -10,7 +10,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish-package:react": "turbo run build --filter=react && changeset publish"
+    "publish-package:react": "turbo run build --filter=react && changeset publish",
+    "publish-package:next": "turbo run build --filter=next && changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "^2.26.2"

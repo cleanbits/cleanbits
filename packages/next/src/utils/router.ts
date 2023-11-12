@@ -33,7 +33,7 @@ export function router(
       pre,
     );
 
-    if (result) return result;
+    if (result && !traverse) return result;
     if (!traverse) return;
   }
 }

@@ -12,7 +12,7 @@ const authChecker = (
 ) => {
   const isAuthenticated = true;
   if (isAuthenticated) {
-    return next();
+    next();
   }
   return res.json({
     error: "You are not authenticated",
